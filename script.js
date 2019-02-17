@@ -35,6 +35,7 @@ function addLi(task) {
 	buttonRemove.addEventListener("click", () => {
 		li.remove();
 	})
+	input[0].value = '';
 }
 
 tasks.forEach(addLi);
@@ -46,7 +47,7 @@ buttonAdd.addEventListener("click", () => {
 
 //add task from input when 'enter' is pressed
 input[0].addEventListener('keyup', (e) => {
-    if (e.keyCode === 13) {
+	if (e.keyCode === 13) { //e.key === 'Enter'
 		addLi(input[0].value);
-  }
+	}
 });
